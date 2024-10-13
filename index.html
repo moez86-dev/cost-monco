@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب المكسب والخسارة لكل مشروع</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- حاوية مرنة لتحسين التناسق -->
+    <div class="container mt-4">
+
+        <!-- عنوان الصفحة -->
+        <h1 class="text-center mb-4">نظام حساب المكسب والخسارة MINCO</h1>
+
+        <!-- استخدام الشبكة لتقسيم الصفحة بشكل مرن -->
+        <div class="row justify-content-center">
+
+            <!-- نموذج إضافة مشروع جديد -->
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                <div class="card mb-4">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h3>إضافة مشروع جديد</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="projectForm">
+                            <div class="mb-3">
+                                <label for="projectName" class="form-label">اسم المشروع</label>
+                                <input type="text" class="form-control" id="projectName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="projectCost" class="form-label">تكلفة المشروع</label>
+                                <input type="number" class="form-control" id="projectCost" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="projectSellValue" class="form-label">قيمة البيع</label>
+                                <input type="number" class="form-control" id="projectSellValue" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">إضافة المشروع</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- عرض قائمة المشاريع -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header text-center bg-secondary text-white">
+                        <h3>المشاريع الحالية</h3>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-bordered table-striped" id="projectsTable">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>اسم المشروع</th>
+                                    <th>تكلفة المشروع</th>
+                                    <th>قيمة البيع</th>
+                                    <th>المكسب/الخسارة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- هنا سيتم إضافة المشاريع تلقائيًا -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
